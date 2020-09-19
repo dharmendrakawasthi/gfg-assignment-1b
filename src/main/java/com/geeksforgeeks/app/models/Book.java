@@ -3,7 +3,7 @@ package com.geeksforgeeks.app.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "books")
+@Document(collection = "gfg")
 public class Book {
 
 	@Id
