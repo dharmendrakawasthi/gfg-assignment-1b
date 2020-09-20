@@ -3,28 +3,29 @@ package com.geeksforgeeks.app.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "gfg")
+@Document(collection = "books")
 public class Book {
-
+	
 	@Id
-	private Integer id;
+	private String id;
 	private String name;
 	private String authorName;
 	private Integer cost;
 	
 	public Book() {}
-
-	public Book(String name, String authorName, Integer cost) {
+	
+	public Book(String id, String name, String authorName, Integer cost) {
+		this.id = id;
 		this.name = name;
 		this.authorName = authorName;
 		this.cost = cost;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
