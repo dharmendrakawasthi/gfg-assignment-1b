@@ -48,5 +48,7 @@ public class BookServiceImpl implements BookService {
 				this.bookRepository.save(book);
 			});
 		});
+		
+		t.start();
 	}
 }
